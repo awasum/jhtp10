@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ComparingIntegers {
 
 	public static void main(String[] args) {
-		
+
 		Scanner input = new Scanner(System.in);
 
 		System.out.print("Enter 2 Integers separated by a space: ");
@@ -16,5 +16,7 @@ public class ComparingIntegers {
 			System.out.printf("%d is larger than %d\n", Math.max(x, y), Math.min(x, y));
 		else
 			System.out.printf("%d and %d are equal\n", x, y);
+
+		input.close();
 	}
 }

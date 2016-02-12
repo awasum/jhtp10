@@ -6,29 +6,25 @@ public class ArithmeticSmallestLargest{
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter three spaced separated integers: ");
+        System.out.print("Enter 3 integers separated by spaces: ");
         int x = input.nextInt();
         int y = input.nextInt();
         int z = input.nextInt();
+       
+        outputResult("Sum", x + y + z);
 
-        // sum
-        printResult("Sum", x + y + z);
+        outputResult("Average", (x + y + z) / 3);
 
-        // average
-        printResult("Average", (x + y + z) / 3);
+        outputResult("Product", x * y * z);
 
-        // product
-        printResult("Product", x * y * z);
+        outputResult("Largest", Math.max(x, Math.max(y, z)));
 
-        // largest
-        printResult("Largest", Math.max(x, Math.max(y, z)));
-
-        // smallest
-        printResult("Smallest", Math.min(x, Math.min(y, z)));
+        outputResult("Smallest", Math.min(x, Math.min(y, z)));
+        
+        input.close();
     }
 
-    // print result
-    private static void printResult(String message, int x){
+    private static void outputResult(String message, int x){
         System.out.printf("%s = %d\n", message, x);
     }
 }
